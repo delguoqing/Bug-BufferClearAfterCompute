@@ -1,0 +1,9 @@
+﻿#pragma kernel CSMain
+
+RWStructuredBuffer<float4> ColorBuffer;
+
+[numthreads(1,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+	ColorBuffer[0] = float4(1.0, 0.0, 0.0, 1.0);
+}
